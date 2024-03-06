@@ -2,16 +2,42 @@
 import { Authenticator } from '@aws-amplify/ui-vue';
 import '@aws-amplify/ui-vue/styles.css';
 import sidebar from './components/sidebar.vue';
-// ... other code below
+import { ref } from 'vue';
+import { useAuthenticator } from '@aws-amplify/ui-vue';
+
+const isAdmin = ref(false);
+const { authStatus, user } = useAuthenticator('context')
+
+const handleAuthStateChange = (state) => {
+  if (state === 'signedIn') {
+    Auth.currentAuthenticatedUser()
+      .then(user => {
+        const cognitoGroups = user.signInUserSession.accessToken.payload['cognito:groups'];
+        isAdmin.value = cognitoGroups && cognitoGroups.includes('admin');
+      })
+      .catch(err => console.error('Error fetching user', err));
+  } else {
+    isAdmin.value = false;
+  }
+}
+
+// Add the emits declaration
+
+emits: ['my-auth-state-change'] 
 </script>
+
 <template>
-  <authenticator>
+  <authenticator @my-auth-state-change="handleAuthStateChange" :hide-sign-up="true">
     <template v-slot="{ signOut }">
       <div class="app">
-        <sidebar />
+        <sidebar :is-admin="isAdmin" />
+
         <router-view />
+
         <button @click="signOut">Cerrar Sesion</button>
-        <!-- Other content from before-->
+
+
+        <!-- Other content -->
       </div>
     </template>
   </authenticator>
@@ -29,8 +55,8 @@ import sidebar from './components/sidebar.vue';
 }
 
 * {
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -54,7 +80,7 @@ button {
     flex: 1 1 0;
     padding: 2rem;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
       padding-left: 6rem;
     }
   }

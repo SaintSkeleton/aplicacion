@@ -11,7 +11,7 @@
   "dependencies": {
     "@apollo/client": "^3.9.5",
     "@aws-amplify/ui-vue": "^4.2.1",
-    "aws-amplify": "^6.0.17",
+    "aws-amplify": "^6.0.18",
     "bootstrap-icons": "^1.11.3",
     "bootstrap-vue": "^2.23.1",
     "bootstrap-vue-3": "^0.5.1",
