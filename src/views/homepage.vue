@@ -2,30 +2,26 @@
 </script>
 
 <template>
+  <header>
+    <h2>tickertape</h2>
+  </header>
   <main class="home-page">
-    <div class="buttons" id="profile">
-      <a href="profile.html">
-        <button type="button">
-          <span class="material-symbols-outlined">
-            person
-          </span>
-        </button>
-      </a>
+
+    <div class="content">
+      <input type="text" name="" id="" v-model="search" placeholder="Buscar...">
+      <h2> dropdown empresa</h2>
+      <h3>dropdown tienda</h3>
+      <p>Solicitud constancia de representatividad: 9999</p>
+      <p>Avisos de tramite: 9999</p>
+      <p>Constancias de representatividad: 9999</p>
+      <p>Consulta: 9999</p>
+      <p>Afiliacion: 9999</p>
     </div>
   </main>
 </template>
 
 <style Lang="scss">
-buttons .material-symbols-outlined { 
-    font-size: 2rem;
-    color: var(--light);
-    transition: 0.2ms ease-out; 
-  
-  }
-
-/* Add this for testing: */
-#profile button .material-symbols-outlined { 
-  font-size: 3rem; /* Use a larger size to see it clearly */
-  color: red !important; /* Force red color for visibility */ 
+.buttons {
+  margin-left: 100%;
 }
 </style>
