@@ -19,15 +19,10 @@
                 <span class="text">Pagina principal</span>
             </router-link>
 
-            <router-link v-if="isAdmin" class="button" to="/dashboard">
+            <router-link  class="button" to="/dashboard">
                 <span class="material-icons">apps</span>
                 <span class="text">Dashboard</span>
             </router-link>
-
-            <a v-else class="button disabled" href="/dashboard">
-                <span class="material-icons" style="color: gray">apps</span>
-                <span class="text" style="color: gray">Dashboard</span>
-            </a>
 
             <router-link class="button" to="/about">
                 <span class="material-icons">info</span>
@@ -157,7 +152,7 @@ aside {
         width: var(--sidebar-width);
 
         .menu-toggle-wrap {
-            top: -3rem;
+            top: 0rem;
 
             .menu-toggle {
                 transform: rotate(-180deg);

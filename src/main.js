@@ -1,6 +1,6 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-const app = createApp(App);
+import router from "./router";
 
 import { Amplify } from "aws-amplify";
 import amplifyconfig from "./amplifyconfiguration.json";
@@ -9,13 +9,16 @@ Amplify.configure(amplifyconfig);
 import awsconfig from "./aws-exports";
 Amplify.configure(awsconfig);
 
-import router from "./router";
+import "@canopassoftware/vue-file-upload/style.css"
+import { SingleFileUpload, MultipleFileUpload } from '@canopassoftware/vue-file-upload'
 
-app.config.warnHandler = function (msg, vm, trace) {
-    // Ignore the specific warning about the "myAuthStateChange" event
-    if (msg.includes('Extraneous non-emits event listeners (myAuthStateChange)')) {
-       return;
-    }
- }
+const app = createApp(App);
 
-createApp(App).use(router).mount("#app");
+app.component('SingleFileUpload', SingleFileUpload)
+app.component('MultipleFileUpload', MultipleFileUpload)
+
+app.use(router)
+
+app.mount('#app')
+
+//createApp(App).use(router).mount("#app");

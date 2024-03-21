@@ -5,6 +5,7 @@ import sidebar from './components/sidebar.vue';
 import { ref } from 'vue';
 import { useAuthenticator } from '@aws-amplify/ui-vue';
 
+
 const isAdmin = ref(false);
 const { authStatus, user } = useAuthenticator('context')
 
@@ -31,7 +32,7 @@ emits: ['my-auth-state-change']
     <template v-slot="{ signOut }">
       <div class="app">
         <sidebar :is-admin="isAdmin" />
-        <router-view />
+        <RouterView />
         <div class="dropdown">
             <button class="dropbtn">
               <span class="material-icons">
@@ -84,11 +85,12 @@ button {
 
  /* Dropdown Button */
  .dropbtn {
-  background-color: #04AA6D;
+    background-color: #04AA6D;
   color: white;
   padding: 16px;
   font-size: 16px;
   border: none;
+  margin-top: 70%;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -105,6 +107,7 @@ button {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  right: 10%;
 }
 
 /* Links inside the dropdown */
