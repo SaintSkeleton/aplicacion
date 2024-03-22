@@ -40,7 +40,7 @@ emits: ['my-auth-state-change']
               </span>
             </button>
             <div class="dropdown-content">
-              <a href="profile.vue">Usuario</a>
+              <a href="profile">Usuario</a>
               <button @click="signOut">Cerrar Sesion</button>
             </div>
         </div>
