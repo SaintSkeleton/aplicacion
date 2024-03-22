@@ -9,16 +9,11 @@ Amplify.configure(amplifyconfig);
 import awsconfig from "./aws-exports";
 Amplify.configure(awsconfig);
 
-import "@canopassoftware/vue-file-upload/style.css"
-import { SingleFileUpload, MultipleFileUpload } from '@canopassoftware/vue-file-upload'
-
 const app = createApp(App);
-
-app.component('SingleFileUpload', SingleFileUpload)
-app.component('MultipleFileUpload', MultipleFileUpload)
 
 app.use(router)
 
 app.mount('#app')
+
 
 //createApp(App).use(router).mount("#app");

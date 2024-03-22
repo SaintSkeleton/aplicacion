@@ -8,11 +8,16 @@
         <div class="ticker-tape-title">Ultimas Actualizaciónes: </div>
         <div class="ticker-tape-scroll">
           <div class="ticker-tape-collection">
-            <div class="ticker-tape-story"><a href="" class="ticker-tape-link"><span>ULTIMA ACTUALIZACIÓN 1</span></a>
+            <div class="ticker-tape-story"><a
+                href="file:///C:/Users/Mgush/Downloads/SOLICITUD-DE-CONSTANCIA-DE-REPRESENTATIVIDAD-ITX-EDOMEX-SATELITE.pdf"
+                class="ticker-tape-link"><span>SOLICITU DE TRÁMITE ITX SATELITE</span></a>
             </div>
-            <div class="ticker-tape-story"><a href="" class="ticker-tape-link"><span>ULTIMA ACTUALIZACIÓN 2</span></a>
+            <div class="ticker-tape-story"><a href="file:///C:/Users/Mgush/Downloads/INICIO%20ITX%20SATELITE.pdf"
+                class="ticker-tape-link"><span>AVISO DE SOLICITUD DE
+                  CONSTANCIA DE REPRESENTATIVIDAD ITX SATELITE</span></a>
             </div>
-            <div class="ticker-tape-story"><a href="" class="ticker-tape-link"><span>ULTIMA ACTUALIZACIÓN 3</span></a>
+            <div class="ticker-tape-story"><a href="file:///C:/Users/Mgush/Downloads/POSITIVA%20ITX%20SATELITE.pdf"
+                class="ticker-tape-link"><span>CONSTANCIA DE REPRESENTATIVIDAD ITX SATELITE</span></a>
             </div>
             <div class="ticker-tape-story"><a href="" class="ticker-tape-link"><span>ULTIMA ACTUALIZACIÓN 4</span></a>
             </div>
@@ -186,19 +191,17 @@
       </div>
     </div>
     <div class="Data">
-      
-      <h2>Solicitud constancia de representatividad: 9999</h2>
-      <h2>Avisos de tramite: 9999</h2>
-      <h2>Constancias de representatividad: 9999</h2>
-      <h2>Consulta: 9999</h2>
-      <h2>Afiliacion: 9999</h2>
+
+      <h2>Solicitudes constancia de representatividad: 1</h2>
+      <h2>Avisos de tramite: 1</h2>
+      <h2>Constancias de representatividad: 1</h2>
+      <h2>Consultas: 0</h2>
+      <h2>Afiliaciones: 0</h2>
     </div>
   </main>
 </template>
 
 <style Lang="scss">
-
-
 .buttons {
   margin-left: 100%;
 }
@@ -307,22 +310,21 @@ a {
   font-size: 1.125rem;
 }
 
-body{
+body {
   background-color: #D9E1EC;
-  margin:0;
+  margin: 0;
 }
 
 .home-page {
-  display: flex;
+  display: inline;
   justify-content: center;
-  align-items: flex-start;
   margin-top: 2.5rem;
 }
 
 .menu {
   --menu-height: 40px;
   box-sizing: border-box;
-  position:relative;
+  position: relative; 
   top: 0;
   left: 0;
   width: 190px;
