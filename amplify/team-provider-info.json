@@ -23,7 +23,8 @@
       },
       "auth": {
         "fptAuthControl": {},
-        "fptFlowAuth": {}
+        "fptFlowAuth": {},
+        "userPoolGroups": {}
       }
     }
   }
