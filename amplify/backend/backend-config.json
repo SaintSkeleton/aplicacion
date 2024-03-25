@@ -1,5 +1,27 @@
 {
   "api": {
+    "AdminQueries": {
+      "authorizationType": "AMAZON_COGNITO_USER_POOLS",
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "fptAuthControl"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "AdminQueries4c083347"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
     "aplicacion": {
       "dependsOn": [],
       "output": {
@@ -18,12 +40,64 @@
     }
   },
   "auth": {
-    "aplicacion4cf92fc9": {
+    "fptAuthControl": {
       "customAuth": false,
       "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL",
+          "NAME"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
       "providerPlugin": "awscloudformation",
-      "service": "Cognito",
-      "serviceType": "imported"
+      "service": "Cognito"
+    },
+    "userPoolGroups": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId",
+            "AppClientIDWeb",
+            "AppClientID",
+            "IdentityPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "fptAuthControl"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito-UserPool-Groups"
+    }
+  },
+  "function": {
+    "AdminQueries4c083347": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "fptAuthControl"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
     }
   },
   "hosting": {
@@ -34,38 +108,6 @@
     }
   },
   "parameters": {
-    "AMPLIFY_auth_aplicacion4cf92fc9_nativeClientId": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "aplicacion4cf92fc9"
-        }
-      ]
-    },
-    "AMPLIFY_auth_aplicacion4cf92fc9_userPoolId": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "aplicacion4cf92fc9"
-        }
-      ]
-    },
-    "AMPLIFY_auth_aplicacion4cf92fc9_userPoolName": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "aplicacion4cf92fc9"
-        }
-      ]
-    },
-    "AMPLIFY_auth_aplicacion4cf92fc9_webClientId": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "aplicacion4cf92fc9"
-        }
-      ]
-    },
     "AMPLIFY_hosting_amplifyhosting_appId": {
       "usedBy": [
         {

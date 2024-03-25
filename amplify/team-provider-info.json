@@ -15,19 +15,14 @@
       "api": {
         "aplicacion": {}
       },
-      "auth": {
-        "aplicacion4cf92fc9": {
-          "userPoolId": "us-east-2_cjAWLzbn0",
-          "userPoolName": "FPTflowUsers",
-          "webClientId": "3tsfg7rb5ojpbkp6ecfi6uqhum",
-          "nativeClientId": "3tsfg7rb5ojpbkp6ecfi6uqhum"
-        }
-      },
       "hosting": {
         "amplifyhosting": {
           "appId": "d3t06wokfp8v4p",
           "type": "manual"
         }
+      },
+      "auth": {
+        "fptAuthControl": {}
       }
     }
   }

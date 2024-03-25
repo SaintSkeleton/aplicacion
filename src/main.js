@@ -11,9 +11,8 @@ Amplify.configure(awsconfig);
 
 const app = createApp(App);
 
-app.use(router)
+app.use(router);
 
-app.mount('#app')
+app.mount("#app");
 
-
-//createApp(App).use(router).mount("#app");
+//createApp(App).use(router, VueFileAgentNext).mount("#app");
