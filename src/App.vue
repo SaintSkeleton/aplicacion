@@ -41,7 +41,8 @@ emits: ['my-auth-state-change']
           </button>
           <div class="dropdown-content">
             <router-link class="button" to="/profile">
-              Usuario</router-link>
+              <span class="text">Profile</span>
+            </router-link>
             <button @click="signOut">Cerrar Sesion</button>
           </div>
         </div>
