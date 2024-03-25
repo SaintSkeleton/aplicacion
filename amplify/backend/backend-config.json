@@ -1,27 +1,5 @@
 {
   "api": {
-    "AdminQueries": {
-      "authorizationType": "AMAZON_COGNITO_USER_POOLS",
-      "dependsOn": [
-        {
-          "attributes": [
-            "UserPoolId"
-          ],
-          "category": "auth",
-          "resourceName": "fptAuthControl"
-        },
-        {
-          "attributes": [
-            "Arn",
-            "Name"
-          ],
-          "category": "function",
-          "resourceName": "AdminQueries4c083347"
-        }
-      ],
-      "providerPlugin": "awscloudformation",
-      "service": "API Gateway"
-    },
     "aplicacion": {
       "dependsOn": [],
       "output": {
@@ -40,7 +18,7 @@
     }
   },
   "auth": {
-    "fptAuthControl": {
+    "FPTflowAuth": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
@@ -77,27 +55,11 @@
             "IdentityPoolId"
           ],
           "category": "auth",
-          "resourceName": "fptAuthControl"
+          "resourceName": "FPTflowAuth"
         }
       ],
       "providerPlugin": "awscloudformation",
       "service": "Cognito-UserPool-Groups"
-    }
-  },
-  "function": {
-    "AdminQueries4c083347": {
-      "build": true,
-      "dependsOn": [
-        {
-          "attributes": [
-            "UserPoolId"
-          ],
-          "category": "auth",
-          "resourceName": "fptAuthControl"
-        }
-      ],
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
     }
   },
   "hosting": {
@@ -105,24 +67,6 @@
       "providerPlugin": "awscloudformation",
       "service": "amplifyhosting",
       "type": "manual"
-    }
-  },
-  "parameters": {
-    "AMPLIFY_hosting_amplifyhosting_appId": {
-      "usedBy": [
-        {
-          "category": "hosting",
-          "resourceName": "amplifyhosting"
-        }
-      ]
-    },
-    "AMPLIFY_hosting_amplifyhosting_type": {
-      "usedBy": [
-        {
-          "category": "hosting",
-          "resourceName": "amplifyhosting"
-        }
-      ]
     }
   }
 }

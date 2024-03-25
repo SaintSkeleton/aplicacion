@@ -22,7 +22,8 @@
         }
       },
       "auth": {
-        "fptAuthControl": {}
+        "fptAuthControl": {},
+        "FPTflowAuth": {}
       }
     }
   }

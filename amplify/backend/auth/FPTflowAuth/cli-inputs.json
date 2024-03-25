@@ -1,10 +1,10 @@
 {
   "version": "1",
   "cognitoConfig": {
-    "identityPoolName": "fptIDpool",
+    "identityPoolName": "fptFlowIdPool",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "aplica3fd34f4a",
-    "userPoolName": "fptUserpool",
+    "resourceNameTruncated": "aplicae65d67ed",
+    "userPoolName": "fptFlowUserPool",
     "autoVerifiedAttributes": [
       "email"
     ],
@@ -14,8 +14,8 @@
     ],
     "smsAuthenticationMessage": "Your authentication code is {####}",
     "smsVerificationMessage": "Your verification code is {####}",
-    "emailVerificationSubject": "Tu codigo de verificación es: ",
-    "emailVerificationMessage": "Tu codigo de verifiación es {####}",
+    "emailVerificationSubject": "Tu codigo de verifiación FPTflow",
+    "emailVerificationMessage": "TU codigo de verificación es: {####}",
     "defaultPasswordPolicy": false,
     "passwordPolicyMinLength": 8,
     "passwordPolicyCharacters": [],
@@ -27,19 +27,19 @@
     "userpoolClientGenerateSecret": false,
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [
+      "phone_number",
       "email",
       "name"
     ],
     "userpoolClientReadAttributes": [
-      "birthdate",
       "email",
-      "nickname",
+      "name",
       "phone_number"
     ],
-    "userpoolClientLambdaRole": "fptAut3fd34f4a_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "FPTfloe65d67ed_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": true,
-    "sharedId": "3fd34f4a",
-    "resourceName": "fptAuthControl",
+    "sharedId": "e65d67ed",
+    "resourceName": "FPTflowAuth",
     "authSelections": "identityPoolAndUserPool",
     "useDefault": "manual",
     "thirdPartyAuth": false,
@@ -47,18 +47,17 @@
       "email"
     ],
     "userPoolGroups": true,
-    "adminQueries": true,
+    "adminQueries": false,
     "triggers": {},
     "hostedUI": true,
-    "hostedUIDomainName": "www",
+    "hostedUIDomainName": "aplicacione65d67ed-e65d67ed",
     "authProvidersUserPool": [],
     "hostedUIProviderMeta": "[]",
-    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"implicit\"],\"AllowedOAuthScopes\":[\"email\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://fptflow.net/\"],\"LogoutURLs\":[\"https://fptflow.net/signout/\"]}",
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"implicit\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://fptflow.net/\"],\"LogoutURLs\":[\"https://fptflow.net/signout/\"]}",
     "userPoolGroupList": [
       "Admin",
       "User"
     ],
-    "adminQueryGroup": "Admin",
     "serviceName": "Cognito",
     "usernameCaseSensitive": false,
     "useEnabledMfas": true
