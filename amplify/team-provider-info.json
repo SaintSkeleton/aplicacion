@@ -23,7 +23,7 @@
       },
       "auth": {
         "fptAuthControl": {},
-        "FPTflowAuth": {}
+        "fptFlowAuth": {}
       }
     }
   }

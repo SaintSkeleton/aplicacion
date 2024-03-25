@@ -3,7 +3,7 @@
   "cognitoConfig": {
     "identityPoolName": "fptFlowIdPool",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "aplicae65d67ed",
+    "resourceNameTruncated": "aplica497a663b",
     "userPoolName": "fptFlowUserPool",
     "autoVerifiedAttributes": [
       "email"
@@ -14,32 +14,27 @@
     ],
     "smsAuthenticationMessage": "Your authentication code is {####}",
     "smsVerificationMessage": "Your verification code is {####}",
-    "emailVerificationSubject": "Tu codigo de verifiación FPTflow",
+    "emailVerificationSubject": "Tu codigo de verificación FPTflow.",
     "emailVerificationMessage": "TU codigo de verificación es: {####}",
     "defaultPasswordPolicy": false,
     "passwordPolicyMinLength": 8,
     "passwordPolicyCharacters": [],
     "requiredAttributes": [
-      "email",
-      "name"
+      "email"
     ],
     "aliasAttributes": [],
     "userpoolClientGenerateSecret": false,
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [
-      "phone_number",
-      "email",
-      "name"
+      "email"
     ],
     "userpoolClientReadAttributes": [
-      "email",
-      "name",
-      "phone_number"
+      "email"
     ],
-    "userpoolClientLambdaRole": "FPTfloe65d67ed_userpoolclient_lambda_role",
-    "userpoolClientSetAttributes": true,
-    "sharedId": "e65d67ed",
-    "resourceName": "FPTflowAuth",
+    "userpoolClientLambdaRole": "fptFlo497a663b_userpoolclient_lambda_role",
+    "userpoolClientSetAttributes": false,
+    "sharedId": "497a663b",
+    "resourceName": "fptFlowAuth",
     "authSelections": "identityPoolAndUserPool",
     "useDefault": "manual",
     "thirdPartyAuth": false,
@@ -49,14 +44,10 @@
     "userPoolGroups": true,
     "adminQueries": false,
     "triggers": {},
-    "hostedUI": true,
-    "hostedUIDomainName": "aplicacione65d67ed-e65d67ed",
-    "authProvidersUserPool": [],
-    "hostedUIProviderMeta": "[]",
-    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"implicit\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://fptflow.net/\"],\"LogoutURLs\":[\"https://fptflow.net/signout/\"]}",
+    "hostedUI": false,
     "userPoolGroupList": [
-      "Admin",
-      "User"
+      "admin",
+      "user"
     ],
     "serviceName": "Cognito",
     "usernameCaseSensitive": false,

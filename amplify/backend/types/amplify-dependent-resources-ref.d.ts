@@ -7,20 +7,18 @@ export type AmplifyDependentResourcesAttributes = {
     }
   },
   "auth": {
-    "FPTflowAuth": {
+    "fptFlowAuth": {
       "AppClientID": "string",
       "AppClientIDWeb": "string",
-      "HostedUIDomain": "string",
       "IdentityPoolId": "string",
       "IdentityPoolName": "string",
-      "OAuthMetadata": "string",
       "UserPoolArn": "string",
       "UserPoolId": "string",
       "UserPoolName": "string"
     },
     "userPoolGroups": {
-      "AdminGroupRole": "string",
-      "UserGroupRole": "string"
+      "adminGroupRole": "string",
+      "userGroupRole": "string"
     }
   }
 }

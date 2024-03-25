@@ -18,7 +18,7 @@
     }
   },
   "auth": {
-    "FPTflowAuth": {
+    "fptFlowAuth": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
@@ -31,8 +31,7 @@
           "passwordPolicyMinLength": 8
         },
         "signupAttributes": [
-          "EMAIL",
-          "NAME"
+          "EMAIL"
         ],
         "socialProviders": [],
         "usernameAttributes": [
@@ -55,7 +54,7 @@
             "IdentityPoolId"
           ],
           "category": "auth",
-          "resourceName": "FPTflowAuth"
+          "resourceName": "fptFlowAuth"
         }
       ],
       "providerPlugin": "awscloudformation",
