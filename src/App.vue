@@ -46,7 +46,6 @@ emits: ['my-auth-state-change']
             <button @click="signOut">Cerrar Sesion</button>
           </div>
         </div>
-
         <!-- Other content -->
 
       </div>
