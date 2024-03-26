@@ -53,7 +53,7 @@ emits: ['my-auth-state-change']
   </authenticator>
 </template>
 
-<style Lang="scss">
+<style>
 :root {
   --primary: #4ade80;
   --primary-alt: #22c55e;
